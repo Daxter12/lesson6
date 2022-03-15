@@ -7,6 +7,18 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "vue"
+    ],
+    "transform": {
+      ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest",
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
+    },
+    "collectCoverage": true,
+    "collectCoverageFrom": ["**/*.{js,vue}", "!**/node_modules/**", "!**/dist/**"]
+  },
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
